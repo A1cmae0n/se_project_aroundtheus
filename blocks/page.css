@@ -1,0 +1,9 @@
+.page {
+    padding-top: 45px;
+    /* padding-bottom: 45px; */
+    padding-left: 200px;
+    padding-right: 200px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+}

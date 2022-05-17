@@ -1,0 +1,22 @@
+.divider {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider__line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: calc((282px * 3) + (20px * 2));
+    display: inline-block;
+    /* height: 18px; */
+    border-bottom: 1px solid #545454;
+    /* height: 200px;
+    opacity: 75%;
+    color: #545454;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: yellow; */
+}
