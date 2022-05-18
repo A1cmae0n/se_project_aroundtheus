@@ -9,15 +9,27 @@
 
 .card {
     height: 381px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 10px;
 }
 
 .card__space {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #FFF;
@@ -31,16 +43,24 @@
 }
 
 .card__heart-icon {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .card__content {
     width: 246px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    font-family: 'Inter';
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -50,17 +70,19 @@
 
 .card__space {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;    
 }
 
 .card__header {
     display: inline-block;
     margin: unset;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
-    font-family: 'Inter';
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
 }
@@ -68,12 +90,12 @@
 .card__caption {
     display: inline-block;
     margin: unset;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 
-    font-family: 'Inter';
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
 }
-

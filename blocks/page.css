@@ -1,9 +1,34 @@
 .page {
     padding-top: 45px;
-    /* padding-bottom: 45px; */
     padding-left: 200px;
     padding-right: 200px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
+    margin: 0 auto;
+    font-family: 'Inter', Arial, sans-serif;
+    position: relative;
+    background-color: black;
+    max-width: 1280px;
+    width: 100%;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .page {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 882px;
+        margin: 0 auto;        
+    }
+}
+
+@media (min-width: 320px) and (max-width:768px) {
+    .page {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/*
+From 320px to a midpoint between 320-768px (mobile).
+From a midpoint between 320-768px to a midpoint between 768-1280px (tablet).
+From a midpoint between 768-1280px and higher (desktop). */
+
+/* max-width 390 for iphones */
