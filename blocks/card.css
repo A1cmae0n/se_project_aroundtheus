@@ -49,6 +49,11 @@
         align-self: center;
 }
 
+.card__heart-icon:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 .card__content {
     width: 246px;
     height: -webkit-fit-content;
