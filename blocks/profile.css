@@ -1,20 +1,20 @@
-@font-face {
-    font-family: 'Inter-Medium';
+/* @font-face {
+    font-family: 'Inter';
     font-style:  normal;
     font-weight: 500;
     font-display: swap;
-    src: url("Inter-Medium.woff2?v=3.19") format("woff2"),
-         url("Inter-Medium.woff?v=3.19") format("woff");
+    src: url("../vendor/Inter-Web/Inter-Medium.woff2?v=3.19") format("woff2"),
+         url("../vendor/Inter-Web/Inter-Medium.woff?v=3.19") format("woff");
 }
 
 @font-face {
-    font-family: 'Inter-Black';
+    font-family: 'Inter';
     font-style:  normal;
     font-weight: 900;
     font-display: swap;
-    src: url("Inter-Black.woff2?v=3.19") format("woff2"),
-         url("Inter-Black.woff?v=3.19") format("woff");
-}
+    src: url("../vendor/Inter-Web/Inter-Black.woff2?v=3.19") format("woff2"),
+         url("../vendor/Inter-Web/Inter-Black.woff?v=3.19") format("woff");
+} */
 
 .profile {
     padding-bottom: 47.25px;
@@ -76,7 +76,7 @@
 .profile__name {
     margin: unset;
     padding: unset;
-    font-family: 'Inter-Medium', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 42px;
     font-weight: 500;
     line-height: 1.14;
@@ -100,9 +100,9 @@
 .profile__title {
     margin: unset;
     padding: unset;
-    font-family: 'Inter-Black', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 1.2;
     color: #FFF;
 }

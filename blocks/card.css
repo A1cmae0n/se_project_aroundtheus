@@ -1,11 +1,11 @@
-@font-face {
-    font-family: 'Inter-Black';
+/* @font-face {
+    font-family: 'Inter';
     font-style:  normal;
     font-weight: 900;
     font-display: swap;
-    src: url("Inter-Black.woff2?v=3.19") format("woff2"),
-         url("Inter-Black.woff?v=3.19") format("woff");
-}
+    src: url("../vendor/Inter_Web/Inter-Black.woff2") format("woff2"),
+         url("../vendor/Inter_Web/Inter-Black.woff") format("woff");
+} */
 
 .card {
     height: 381px;
@@ -66,7 +66,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    font-family: 'Inter-Black', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -81,7 +81,7 @@
        text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'Inter-Black', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
 }
