@@ -81,7 +81,7 @@
        text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'Inter-Black', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
 }
@@ -94,7 +94,7 @@
     white-space: nowrap;
     overflow: hidden;
 
-    font-family: 'Inter-Black', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
 }
