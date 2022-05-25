@@ -6,3 +6,9 @@
     font-size: 18px;
     line-height: 1.2;
 }
+
+@media screen and (max-width: 375px) {
+    .footer__author {
+        font-size: 14px;
+    }
+}

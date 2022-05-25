@@ -13,7 +13,7 @@
 }
 
 .profile__image {
-    width: 100px;
+    height: 125px;
     border-radius: 50% 50%;
     margin-right: 35px;
 }
@@ -35,10 +35,16 @@
             align-items: center;
     border: 2px solid #FFF;
     border-radius: 2px;
+    background-color: #000;
+    background-image: url("../images/plus_sign.svg");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
 .profile__button:hover {
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;
 }
 
@@ -63,6 +69,12 @@
     font-weight: 500;
     line-height: 1.14;
     color: #FFF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: ; 
+    display: flex;
+    align-items: center;
 }
 
 .profile__edit {
@@ -72,10 +84,17 @@
     width: 24px;
     border: 1px solid #FFF;
     padding: 5px;
+    background-image: url('../images/edit_icon.svg');
+    background-color: #000;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 8px;
+    margin-left: 18px;
 }
 
 .profile__edit:hover {
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;    
 }
 
@@ -87,6 +106,10 @@
     font-weight: 400;
     line-height: 1.2;
     color: #FFF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: ; 
 }
 
 @media screen and (max-width: 1279px) {
@@ -107,20 +130,25 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-    .profile__title {
-        margin-top: 14px;
-        margin-bottom: 36px;
+@media screen and (max-width: 375px) {
+    .profile__button {
+        width: 100%;
     }
-}
-
-@media (min-width: 320px) and (max-width:767px) {
+    .profile__name-title {
+        width: 100%;
+    }
     .profile__name {
         font-size: 22px;
+        margin: 0 auto;
     }
     .profile__title {
-        font-size: 14px;
         margin-top: 14px;
         margin-bottom: 36px;
+    }
+    .profile__edit {
+        margin-top: 0;
+        margin-left: 10px;
+        height: 18px;
+        width: 18px;
     }
 }

@@ -29,7 +29,8 @@
     padding-bottom: 41px;
 }
 
-.header__divider {
+.header__content::after {
+    content:'';
     width: 100%;
     opacity: 75%;
     height: 2px;

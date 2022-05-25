@@ -8,25 +8,9 @@
     width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-    .page {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: 882px;
-        margin: 0 auto;        
-    }
-}
-
-@media (min-width: 320px) and (max-width:767px) {
+@media screen and (max-width: 375px) {
     .page {
         padding-left: 0;
         padding-right: 0;
     }
 }
-
-/*
-From 320px to a midpoint between 320-768px (mobile).
-From a midpoint between 320-768px to a midpoint between 768-1280px (tablet).
-From a midpoint between 768-1280px and higher (desktop). */
-
-/* max-width 390 for iphones */
