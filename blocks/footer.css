@@ -8,7 +8,15 @@
 }
 
 @media screen and (max-width: 375px) {
+    .footer {
+        width: 282px;
+        margin: 0 auto;
+    }
+
     .footer__author {
         font-size: 14px;
+        padding-top: 0;
+        margin-top: 48px;
+        margin-bottom: 36px;
     }
 }

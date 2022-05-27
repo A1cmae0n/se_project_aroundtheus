@@ -1,5 +1,5 @@
 .profile {
-    padding-bottom: 47.25px;
+    padding-bottom: 46px;
 }
 
 .profile__content {
@@ -11,6 +11,21 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
+
+.profile__name-title { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center; 
+    margin-right: auto; 
+    max-width: 100%;
+} 
 
 .profile__image {
     height: 125px;
@@ -35,7 +50,7 @@
             align-items: center;
     border: 2px solid #FFF;
     border-radius: 2px;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0);
     background-image: url("../images/plus_sign.svg");
     background-size: 22px;
     background-repeat: no-repeat;
@@ -48,7 +63,7 @@
     cursor: pointer;
 }
 
-.profile__name-title {
+/* .profile__name-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,7 +74,7 @@
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin-right: auto;
-}
+} */
 
 .profile__name {
     margin: unset;
@@ -72,29 +87,13 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    max-width: ; 
     display: flex;
     align-items: center;
-}
-
-.profile__edit {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    height: 24px;
-    width: 24px;
-    border: 1px solid #FFF;
-    padding: 5px;
-    background-image: url('../images/edit_icon.svg');
-    background-color: #000;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 8px;
-    margin-left: 18px;
-}
-
-.profile__edit:hover {
-    opacity: 0.6;
-    cursor: pointer;    
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    margin-bottom: 16px;
 }
 
 .profile__title {
@@ -108,6 +107,32 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    max-width: ; 
+    height: fit-content;
+    box-sizing: border-box;
+    width: 415px;
+    max-width: 100%;
+}
+
+.profile__edit {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #FFF;
+    padding: 5px;
+    background-image: url('../images/edit_icon.svg');
+    background-color: rgba(255, 255, 255, 0);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 8px;
+    margin-left: 18px;
+}
+
+.profile__edit:hover {
+    opacity: 0.6;
+    cursor: pointer;    
 }
 
 @media screen and (max-width: 1279px) {
@@ -121,32 +146,55 @@
 
     .profile__name-title {
         margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .profile__name {
+        font-size: 22px;
+        margin: 0 auto;
+        margin-bottom: 14px;
     }
 
     .profile__image {
         margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .profile__button {
-        width: 100%;
-    }
-    .profile__name-title {
-        width: 100%;
-    }
-    .profile__name {
-        font-size: 22px;
-        margin: 0 auto;
-    }
-    .profile__title {
-        margin-top: 14px;
-        margin-bottom: 36px;
     }
     .profile__edit {
         margin-top: 0;
         margin-left: 10px;
         height: 18px;
         width: 18px;
+        box-sizing: border-box;
+    }
+    .profile__image {
+        margin-bottom: 26.25px; 
+    }
+
+    .profile__button {
+        width: 282px;
+        margin: 0 auto;
+        margin-top: 36px;
+        margin-bottom: 36px;
+
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .profile__image {
+        margin-bottom: 26.25px; 
+    }
+
+    .profile__button {
+        width: 282px;
+        margin: 0 auto;
+        margin-top: 36px;
+        margin-bottom: 36px;
+    }
+    .profile__name-title {
+        width: 100%;
+    }
+    
+    .profile__name {
+        margin: 0 auto;
+        margin-bottom: 14px;
     }
 }

@@ -1,12 +1,16 @@
+.cards {
+    /* box-sizing: border-box; */
+}
+
 .cards__list {
-    margin: 0;
-    padding: 0;
+    margin: unset;
+    padding: unset;
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 282px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    grid-gap: 20px 18px;
+    grid-gap: 20px 17px;
     list-style-type: none;
 }
