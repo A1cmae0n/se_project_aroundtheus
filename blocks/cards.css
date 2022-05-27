@@ -3,8 +3,8 @@
 }
 
 .cards__list {
-    margin: unset;
-    padding: unset;
+    margin: 0;
+    padding: 0;
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 282px);

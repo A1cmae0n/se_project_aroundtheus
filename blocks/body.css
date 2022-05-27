@@ -8,4 +8,5 @@
         -ms-flex-align: center;
             align-items: center;
     background-color: #000;
+    max-width: 100%;
 }
