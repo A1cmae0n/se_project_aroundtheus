@@ -63,7 +63,7 @@
        text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: ;
+    max-width: calc(282px - 20px + 21px + 30px);
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
