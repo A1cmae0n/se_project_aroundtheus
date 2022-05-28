@@ -73,7 +73,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 415px; 
+    max-width: 415px;
     display: flex;
     align-items: center;
     width: fit-content;
@@ -92,7 +92,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 415px; 
+    max-width: 415px;
     height: fit-content;
     box-sizing: border-box;
 }
@@ -139,17 +139,15 @@
     }
 
     .profile__image {
-        margin: 0 auto;
+        margin: 0 auto 25px; 
     }
+
     .profile__edit {
         margin-top: 0;
         margin-left: 10px;
         height: 18px;
         width: 18px;
         box-sizing: border-box;
-    }
-    .profile__image {
-        margin-bottom: 26.25px; 
     }
 
     .profile__button {
