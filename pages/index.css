@@ -9,3 +9,7 @@
 @import url('../blocks/card.css');
 @import url('../blocks/profile.css');
 @import url('../blocks/footer.css');
+
+* {
+    outline: 1px dotted red;
+}

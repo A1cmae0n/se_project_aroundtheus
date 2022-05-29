@@ -73,11 +73,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 415px;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content;
+    height: fit-content; */
     margin: 0 auto 16px;
 }
 
@@ -92,7 +89,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 415px;
     height: fit-content;
     box-sizing: border-box;
 }
@@ -162,6 +158,10 @@
 @media screen and (max-width: 375px) {
     .profile__image {
         margin-bottom: 26.25px; 
+    }
+
+    .profile__title {
+        font-size: 14px;
     }
 
     .profile__button {

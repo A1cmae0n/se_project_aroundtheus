@@ -16,11 +16,11 @@
     }
 } */
 
-@media screen and (min-width: 1179) {
+/* @media screen and (min-width: 1179px) {
     .page {
 
     }
-}
+} */
 
 @media screen and (max-width: 375px) {
     .page {
