@@ -105,6 +105,7 @@
     background-position: center;
     justify-self: center;
     align-self: center;
+    margin-top: 5px;
 }
 
 .profile__edit:hover {
