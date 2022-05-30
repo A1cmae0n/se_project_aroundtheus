@@ -1,5 +1,6 @@
 .page {
     padding-top: 45px;
+
     font-family: 'Inter', Arial, sans-serif;
     width: 100%;
     max-width: 882px;
@@ -7,19 +8,6 @@
     position: relative;
     margin: 0 auto;
 }
-/* 
-@media screen and (max-width: 1280px) {
-    .page {
-        padding-left: 0;
-        padding-right: 0;
-    }
-} */
-
-/* @media screen and (min-width: 1179px) {
-    .page {
-
-    }
-} */
 
 @media screen and (max-width: 375px) {
     .page {

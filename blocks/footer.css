@@ -8,15 +8,23 @@
 }
 
 @media screen and (max-width: 375px) {
-    .footer {
-        width: 282px;
-        margin: 0 auto;
-    }
-
     .footer__author {
         font-size: 14px;
         padding-top: 0;
         margin-top: 48px;
         margin-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .footer {
+        width: 282px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 581px) and (max-width: 879px) {
+    .header__content::after {
+        width: calc(282px * 2);
     }
 }
