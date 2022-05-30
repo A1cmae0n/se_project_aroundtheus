@@ -31,6 +31,13 @@
     margin-bottom: 36.25px; 
 }
 
+.header__logo {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-bottom: 41px;
+}
+
 @media screen and (max-width: 1279px) {
     .header__content::after {
         margin-bottom: 38.25px;     
@@ -53,13 +60,6 @@
     }
 }
 
-
-.header__logo {
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
-    margin-bottom: 41px;
-}
 
 @media screen and (max-width: 375px) {
     .header__logo {
