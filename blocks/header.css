@@ -22,7 +22,7 @@
             flex-direction: column;
 }
 
-.header__content::after {
+.header::after {
     content:'';
     width: 100%;
     opacity: 70%;
@@ -68,19 +68,16 @@
         padding-bottom: 0;
         margin-bottom: 32px;
     }
+}
 
-    .header__content::after {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+@media screen and (min-width: 376px) and (max-width: 580px) {
+    .header::after {
+        width: 282px;
     }
 }
 
 @media screen and (min-width: 581px) and (max-width: 879px) {
-    .header__content::after {
+    .header::after {
         width: calc(282px * 2);
     }
 }
