@@ -49,7 +49,7 @@
 
 @media screen and (min-width: 581px) and (max-width: 879px) {
     .header__content {
-        width: calc(282px * 2);
+        width: calc((282px * 2) + 17px);
     }
 }
 

@@ -5,26 +5,34 @@
     margin-bottom: 60px;
     font-size: 18px;
     line-height: 1.2;
+    width: 100%;
 }
 
 @media screen and (max-width: 375px) {
     .footer__author {
         font-size: 14px;
+        line-height: 1.2;
         padding-top: 0;
+        margin-top: 48px;
+        margin-bottom: 36px;
+        width: 282px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 580px) {
+    .footer__author {
+        width: 282px;
+        margin: 0 auto;
         margin-top: 48px;
         margin-bottom: 36px;
     }
 }
 
-@media screen and (max-width: 580px) {
-    .footer {
-        width: 282px;
-        margin: 0 auto;
-    }
-}
-
 @media screen and (min-width: 581px) and (max-width: 879px) {
-    .header__content::after {
-        width: calc(282px * 2);
+    .footer__author {
+        width: calc((282px * 2) + 17px);
+        margin: 0 auto;
+        margin-top: 67px;
+        margin-bottom: 60px;
     }
 }
