@@ -1,5 +1,7 @@
-.profile {
-    padding-bottom: 46px;
+@media screen and (min-width: 1280px) {
+    .profile {
+        margin-bottom: 46px;
+    }
 }
 
 .profile__content {
@@ -28,8 +30,7 @@
 
 .profile__name {
     margin: unset;
-    /* max-width: calc(414px - (24px + 18px)); */
-    width: 373px;
+    max-width: 373px;
 }
 
 .profile__image {
@@ -66,6 +67,7 @@
 .profile__button:hover {
     opacity: 0.6;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .profile__name-edit {
@@ -89,6 +91,7 @@
     width: fit-content;
     margin-right: 16px;
     margin-left: 0;
+    max-width: 373px;
 }
 
 .profile__edit {
@@ -111,6 +114,7 @@
 .profile__edit:hover {
     opacity: 0.6;
     cursor: pointer;    
+    transition: 0.3s;
 }
 
 .profile__title {
@@ -147,6 +151,11 @@
     .profile__name {
         font-size: 22px;
         margin: 0 auto;
+    
+    }
+
+    .profile__title {
+        margin-top: 14px;
     }
 
     .profile__image {
@@ -193,13 +202,9 @@
         width: 100%;
     }
 
-    .profile__name-edit {
-        margin-left: 28px;
-    }
-    
     .profile__name {
         margin: 0;
-        max-width: calc(282px - 28px);
+        max-width: 196px;
     }
 
     .profile__edit {
