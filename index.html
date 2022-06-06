@@ -79,12 +79,12 @@
                 <p class="footer__author">2022 Around The U.S.</p>
             </footer>
         </div>
-        <div class="modal">
+        <section class="modal">
             <div class="modal__container">
                 <div class="modal__content">
-                    <div class="modal__close"></div>
+                    <div class="modal__close">
                         <h3 class="modal__header">Edit profile</h3>
-                        <form class="form modal__form" action="">
+                        <form class="form modal__form" action="#">
                             <fieldset class="form__fieldset">
                                 <input
                                     type="text"
@@ -101,24 +101,25 @@
                                     placeholder=""
                                 />
                             </fieldset>
-                            <fieldset class='form__fieldset'>
-                                <button type='submit' class='form__button'>Save</button>
+                            <fieldset class="form__fieldset">
+                                <button type="submit" class="form__button">Save</button>
                             </fieldset>
                         </form>
                     </div>
                 </div>
             </div>    
-        </div>
-        
+        </section>
+
+        <template id="card-template">
+            <li class="card">
+                <img class="card__image" src="" alt="">
+                <div class="card__content">
+                    <h2 class="card__header"></h2>
+                    <button type="button" class="card__heart-icon"></button>
+                </div>
+            </li>
+        </template>
+
         <script defer src="./scripts/index.js"></script>
     </body>
-    <template id="card-template">
-        <li class="card">
-            <img class="card__image" src="" alt="">
-            <div class="card__content">
-                <h2 class="card__header"></h2>
-                <button type="button" class="card__heart-icon"></button>
-            </div>
-        </li>
-    </template>
 </html>
