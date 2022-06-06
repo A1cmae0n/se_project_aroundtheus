@@ -9,6 +9,7 @@
 }
 
 .modal__container {
+    width: 100%;
     z-index: 2;
     position: relative;
     height: 330px;
@@ -89,6 +90,8 @@
     }
     .modal__close {
         width: 26px;
+        top: calc(-30px - 13.62px);
+        right: 0px;
     }
     .modal__header {
         margin-left: 22px;
