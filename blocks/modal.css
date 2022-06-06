@@ -1,7 +1,7 @@
 .modal {
-    position: absolute;
+    position: fixed;
     top: 0px;
-    height: 200vh;
+    height: 600vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
@@ -47,13 +47,13 @@
 .modal__header {
     margin: unset;
     padding: unset;
-    margin: 0 auto;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 1.2;
-    width: 358px;
+    width: fit-content;
+    margin-left: 34px;
     margin-top: 34px;
 }
 
@@ -77,4 +77,21 @@
 
 .modal_opened {
     display: block;
+}
+
+@media screen and (max-width: 879px) {
+    .modal__container {
+        width: 282px;
+        height: 322px;
+        left: 50%;
+        margin-left: calc(-282px / 2);
+        top: 123px;
+    }
+    .modal__close {
+        width: 26px;
+    }
+    .modal__header {
+        margin-left: 22px;
+        margin-top: 25px;
+    }
 }
