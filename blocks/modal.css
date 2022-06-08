@@ -16,7 +16,7 @@
     background-color: rgba(255, 255, 255);
     border-radius: 10px;
     align-self: center;
-    justify-self: center; 
+    justify-self: center;
     margin: 0 auto;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .modal_opened {
-    display: flex;
+    display: block;
 }
 
 @media screen and (max-width: 879px) {
