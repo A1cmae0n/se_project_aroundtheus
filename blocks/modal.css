@@ -1,34 +1,23 @@
 .modal {
     position: fixed;
     top: 0px;
-    height: 600vh;
+    height: 720px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
     display: none;
+    justify-content: center;
+    align-content: center;
 }
 
 .modal__container {
     width: 100%;
     z-index: 2;
-    position: relative;
+    /* position: relative; */
     height: 330px;
-    max-width: 430px;
+    width: 430px;
     background-color: rgba(255, 255, 255);
-    left: 50%;
-    margin-left: calc(-430px / 2);
-    top: 195px;
     border-radius: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
 }
 
 .modal__content {
@@ -54,23 +43,22 @@
     font-weight: 900;
     font-size: 24px;
     line-height: 1.2;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 330px;
     margin-left: 34px;
+    margin-right: 64px;
     margin-top: 34px;
 }
 
 .modal__close {
     background-image: url("../images/close_icon.svg");
-    position: absolute;
-    height: 28.28px;
-    width: 28.28px;
-    background-color: black;
+    position: relative;
+    height: 48.28px;
+    width: 48.28px;
+    background-color: rgba(0, 0, 0, 1);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -30px;
-    right: -30px;
+    top: -33px;
+    right: -430px;
 }
 
 .modal__close:hover {
@@ -79,24 +67,29 @@
 }
 
 .modal_opened {
-    display: block;
+    display: grid;
 }
 
 @media screen and (max-width: 879px) {
     .modal__container {
         width: 282px;
-        height: 322px;
-        left: 50%;
-        margin-left: calc(-282px / 2);
-        top: 123px;
     }
     .modal__close {
         width: 26px;
-        top: calc(-30px - 13.62px);
-        right: 0px;
+        height: 26px;
+        top: -30px;
+        right: calc(-282px + 18px);
     }
     .modal__header {
+        width: 238px;
         margin-left: 22px;
+        margin-right: 22px;
         margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .modal__header {
+        font-size: 18px;
     }
 }

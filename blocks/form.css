@@ -26,7 +26,8 @@
     color: inherit;
     outline: inherit;
     border: none;
-    border-bottom: 1px solid gray;
+    opacity: 0.2;
+    border-bottom: 1px solid #000;
     height: 40px;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
@@ -37,11 +38,11 @@
 
 }
 
-.form__input-name {
+.form__input:first-of-type {
     margin-top: 41px;
 }
 
-.form__input-description {
+.form__input-description:nth-of-type(2) {
     margin-top: 14px;
 }
 
@@ -70,5 +71,11 @@
 @media screen and (max-width: 879px) {
     .form {
         width: 238px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .form__button {
+        font-size: 14px;
     }
 }

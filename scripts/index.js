@@ -10,23 +10,19 @@ const initialCards = [
 // selectors for modal elements
 const profileEdit = document.querySelector(".profile__edit");
 const modal = document.querySelector(".modal");
-const formButton = document.querySelector(".form__button");
+const form = document.querySelector(".form");
 const modalCloseIcon = document.querySelector(".modal__close");
+const cardsList = document.querySelector(".cards__list");
 
 // selectors for profile elements
 let userName = document.querySelector(".profile__name");
 let userDescription = document.querySelector(".profile__title");
 
-// listeners for profile & modal buttons
-profileEdit.addEventListener("click", openModal);
-modalCloseIcon.addEventListener("click", closeModal);
-formButton.addEventListener("click", saveProfileEdit);
-
 // functions for the above listeners
 function openModal() {
     modal.classList.add("modal_opened");
-    document.querySelector(".form__input-name").placeholder = userName.textContent;
-    document.querySelector(".form__input-description").placeholder = userDescription.textContent;
+    document.querySelector(".form__input:first-of-type").value = userName.textContent;
+    document.querySelector(".form__input:nth-of-type(2)").value = userDescription.textContent;
 }
 
 function closeModal() { 
@@ -58,6 +54,12 @@ function getCardElement(data) {
 }
 
 for (let i = 0; i < initialCards.length; i++) {
-    getCardElement(initialCards[i]);
+    let card = getCardElement(initialCards[i]);
+    cardsList.appendChild(card);
 }
+
+// listeners for profile & modal buttons
+profileEdit.addEventListener("click", openModal);
+modalCloseIcon.addEventListener("click", closeModal);
+form.addEventListener("submit", saveProfileEdit);
 
