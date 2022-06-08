@@ -11,7 +11,7 @@
             flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; 
+    height: fit-content;
 }
 
 .form__fieldset {
@@ -26,8 +26,8 @@
     color: inherit;
     outline: inherit;
     border: none;
-    opacity: 0.2;
-    border-bottom: 1px solid #000;
+    /* opacity: 0.2; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     height: 40px;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
@@ -42,7 +42,7 @@
     margin-top: 41px;
 }
 
-.form__input-description:nth-of-type(2) {
+.form__input:nth-of-type(2) {
     margin-top: 14px;
 }
 
@@ -61,6 +61,7 @@
     height: 50.15px;
     margin: 0 auto;
     margin-bottom: 36.51px;
+    margin-top: 48px;
 }
 
 .form__button:hover {

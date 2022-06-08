@@ -11,13 +11,11 @@
 }
 
 .modal__content {
-
     height: 330px;
+    /* height: fit-content; */
     width: 430px;
     background-color: rgba(255, 255, 255);
     border-radius: 10px;
-
-    
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -43,18 +41,21 @@
     width: 330px;
     margin-left: 34px;
     margin-right: 64px;
-    margin-top: 34px;
+    /* margin-top: 34px; */
 }
 
 .modal__close {
+    padding: unset;
+    border: none;
+    outline: inherit;
     background-image: url("../images/close_icon.svg");
     position: relative;
-    height: 48.28px;
-    width: 48.28px;
+    height: 40px;
+    width: 40px;
     background-color: rgba(0, 0, 0, 1);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -33px;
+    top: -40px;
     right: -430px;
 }
 
@@ -68,7 +69,7 @@
 }
 
 @media screen and (max-width: 879px) {
-    .modal__container {
+    .modal__content {
         width: 282px;
     }
     .modal__close {
