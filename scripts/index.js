@@ -36,7 +36,7 @@ function saveProfileEdit(e){
     let userDescriptionInput = document.getElementById("description").value;
     userName.textContent = userNameInput;
     userDescription.textContent = userDescriptionInput;
-    closeModal();
+    closeModal(e);
 }
 
 // For future functionality 
@@ -61,6 +61,6 @@ for (let i = 0; i < initialCards.length; i++) {
 
 // listeners for profile & modal buttons
 profileEdit.addEventListener("click", openModal);
-modalCloseIcon.addEventListener("click", closeModal);
+modalCloseIcon.addEventListener("submit", closeModal);
 form.addEventListener("submit", saveProfileEdit);
 
