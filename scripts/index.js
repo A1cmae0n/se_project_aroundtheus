@@ -25,8 +25,7 @@ function openModal() {
     document.querySelector(".form__input:nth-of-type(2)").value = userDescription.textContent;
 }
 
-function closeModal(e) { 
-    e.preventDefault();
+function closeModal() { 
     modal.classList.remove("modal_opened");
 }
 
@@ -36,7 +35,7 @@ function saveProfileEdit(e){
     let userDescriptionInput = document.getElementById("description").value;
     userName.textContent = userNameInput;
     userDescription.textContent = userDescriptionInput;
-    closeModal(e);
+    closeModal();
 }
 
 // For future functionality 
