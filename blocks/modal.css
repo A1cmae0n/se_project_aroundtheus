@@ -1,29 +1,23 @@
 .modal {
-    position: fixed;
-    top: 0px;
-    height: 720px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
+    /* position: fixed;
+    top: 0px; */
+    height: 720px;
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    justify-content: center;
-    align-content: center;
+    
 }
 
-.modal__content {
-    height: 330px;
-    /* height: fit-content; */
-    width: 430px;
+.modal__container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255);
     border-radius: 10px;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; 
+    align-self: center;
+    justify-self: center; 
+    margin: 0 auto;
 }
 
 .modal__form {
@@ -48,11 +42,11 @@
     padding: unset;
     border: none;
     outline: inherit;
-    background-image: url("../images/close_icon.svg");
     position: relative;
     height: 40px;
     width: 40px;
-    background-color: rgba(0, 0, 0, 1);
+    background-image: url("../images/close_icon.svg");
+    background-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
     background-size: contain;
     top: -40px;
@@ -65,12 +59,14 @@
 }
 
 .modal_opened {
-    display: grid;
+    display: flex;
 }
 
 @media screen and (max-width: 879px) {
-    .modal__content {
+    .modal__container {
         width: 282px;
+        /* top: 100px;
+        left: 19px; */
     }
     .modal__close {
         width: 26px;

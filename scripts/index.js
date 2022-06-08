@@ -11,7 +11,7 @@ const initialCards = [
 const profileEdit = document.querySelector(".profile__edit");
 const modal = document.querySelector(".modal");
 const form = document.querySelector(".form");
-const modalCloseIcon = document.querySelector(".modal__close");
+const modalClose = document.querySelector(".modal__close");
 const cardsList = document.querySelector(".cards__list");
 
 // selectors for profile elements
@@ -61,6 +61,6 @@ for (let i = 0; i < initialCards.length; i++) {
 
 // listeners for profile & modal buttons
 profileEdit.addEventListener("click", openModal);
-modalCloseIcon.addEventListener("submit", closeModal);
+modalClose.addEventListener("click", closeModal);
 form.addEventListener("submit", saveProfileEdit);
 
