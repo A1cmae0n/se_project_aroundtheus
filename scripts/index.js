@@ -25,7 +25,8 @@ function openModal() {
     document.querySelector(".form__input:nth-of-type(2)").value = userDescription.textContent;
 }
 
-function closeModal() { 
+function closeModal(e) { 
+    e.preventDefault();
     modal.classList.remove("modal_opened");
 }
 

@@ -39,33 +39,31 @@
             </footer>
         </div>
         <section class="modal">
-            <div class="modal__container">
-                <div class="modal__content">
-                    <div class="modal__close"></div>
-                    <h3 class="modal__header">Edit profile</h3>
-                    <form class="form modal__form" action="#">
-                        <fieldset class="form__fieldset">
-                            <input
-                                type="text"
-                                class="form__input"
-                                id="name"
-                                name="name"
-                                placeholder=""
-                            />
-                            <input
-                                type="text"
-                                class="form__input"
-                                id="description"
-                                name="description"
-                                placeholder=""
-                            />
-                        </fieldset>
-                        <fieldset class="form__fieldset">
-                            <button type="submit" class="form__button">Save</button>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>    
+            <div class="modal__content">
+                <button class="modal__close" type="submit"></button>
+                <h3 class="modal__header">Edit profile</h3>
+                <form class="form modal__form" action="#" name="editProfile">
+                    <fieldset class="form__fieldset">
+                        <input
+                            type="text"
+                            class="form__input"
+                            id="name"
+                            name="name"
+                            placeholder=""
+                        />
+                        <input
+                            type="text"
+                            class="form__input"
+                            id="description"
+                            name="description"
+                            placeholder=""
+                        />
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <button type="submit" class="form__button">Save</button>
+                    </fieldset>
+                </form>
+            </div>
         </section>
 
         <template id="card-template">
