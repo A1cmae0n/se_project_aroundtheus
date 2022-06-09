@@ -15,7 +15,7 @@
 .modal__container{
     background-color: rgba(255, 255, 255);
     border-radius: 10px;
-    height: 330px;
+    padding-bottom: 36.51px; 
 }
 
 .modal__header {
@@ -58,8 +58,8 @@
 
 @media screen and (max-width: 879px) {
     .modal__container {
-        height: 322px;
         width: 282px;
+        padding-bottom: 25px;
     }
     
     .modal__close {
