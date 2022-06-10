@@ -42,11 +42,11 @@
 }
 
 .form__button {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     outline: none;
     padding: unset;
     border: none;
-    outline: inherit;
     background-color: #000;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
