@@ -25,7 +25,7 @@
                             </div>                
                             <p class="profile__title">Explorer</p>
                         </div>
-                        <button type="button" class="profile__button"></button>
+                        <button type="button" class="profile__add-location"></button>
                     </div>
                 </section>
                 <section class="cards">
@@ -38,21 +38,21 @@
                 <p class="footer__author">2022 Around The U.S.</p>
             </footer>
         </div>
-        <section class="modal">
+        <section class="modal modal__edit">
             <div class="modal__container">
                 <h3 class="modal__header">Edit profile</h3>
-                <form class="form modal__form" action="#" name="form" id="editProfile">
+                <form class="form modal__form-edit" action="#" name="form" id="editProfile">
                     <fieldset class="form__fieldset">
                         <input
                             type="text"
-                            class="form__input"
+                            class="form__input-edit"
                             id="name"
                             name="name"
                             placeholder=""
                         />
                         <input
                             type="text"
-                            class="form__input"
+                            class="form__input-edit"
                             id="description"
                             name="description"
                             placeholder=""
@@ -62,13 +62,42 @@
                         <button type="submit" class="form__button">Save</button>
                     </fieldset>
                 </form>
-                <button class="modal__close" type="button"></button>
+                <button class="modal__close modal__close-edit" type="submit"></button>
+            </div>
+        </section>
+
+        <section class="modal modal__add-location">
+            <div class="modal__container">
+                <h3 class="modal__header">New Place</h3>
+                <form class="form modal__form-new-location" action="#" name="form" id="newLocation">
+                    <fieldset class="form__fieldset">
+                        <input
+                            type="text"
+                            class="form__input-new-location"
+                            id="title"
+                            name="title"
+                            placeholder=""
+                        />
+                        <input
+                            type="text"
+                            class="form__input-new-location"
+                            id="image-url"
+                            name="image-url"
+                            placeholder=""
+                        />
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <button type="submit" class="form__button">Save</button>
+                    </fieldset>
+                </form>
+                <button class="modal__close modal__close-new-location" type="submit"></button>
             </div>
         </section>
 
         <template id="card-template">
             <li class="card">
                 <img class="card__image" src="" alt="">
+                <button type="button" class="card__trash"></button>
                 <div class="card__content">
                     <h2 class="card__header"></h2>
                     <button type="button" class="card__heart-icon"></button>

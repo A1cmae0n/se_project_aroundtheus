@@ -8,12 +8,14 @@
             flex-direction: column;
     border-radius: 10px;
     background-color: white;
+    position: relative;
 }
 
 .card__image {
     height: 282px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border: none;
 }
 
 .card__heart-icon {
@@ -26,12 +28,38 @@
     border: none;
     color: #000;
     background-color: rgba(255, 255, 255, 0);
+    background-size: cover;
+}
+
+.card__heart-icon_active {
+    background-image: url("../images/heart-clicked.svg");
 }
 
 .card__heart-icon:hover {
     opacity: 0.5;
     cursor: pointer;
 }
+
+.card__heart-icon:focus {
+    filter: grayscale(100%);
+}
+
+.card__trash {
+    background-image: url("../images/trash.svg");
+    background-color: rgba(255, 255, 255, 0);   
+    width: 18px;
+    height: 20px;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    border: none;
+}
+
+.card__trash:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 
 .card__content {
     width: auto;

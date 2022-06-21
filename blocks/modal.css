@@ -12,11 +12,18 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    /* align-content: center; */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
 }
+
+/* .modal__add-location {
+    display: none;
+}
+
+.modal__edit [
+
+} */
 
 .modal__container{
     background-color: rgba(255, 255, 255);
