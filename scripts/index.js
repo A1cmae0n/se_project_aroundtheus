@@ -27,8 +27,12 @@ const addLocationForm = document.querySelector(".modal__form-new-location");
 const modalCloseEdit = document.querySelector(".modal__close");
 const modalCloseNewLocation = document.querySelector(".modal__close-new-location");
 
-//selector(s) for cards
+// selector(s) for cards
 const cardHeart = document.querySelector(".card__heart-icon");
+
+// selector(s) for images
+const image = document.querySelector(".image");
+const imageHidden = document.querySelector(".image__img");
 
 // selectors for profile elements
 let userName = document.querySelector(".profile__name");
@@ -134,5 +138,18 @@ document.querySelectorAll('.card__heart-icon').forEach( heart => {
 document.querySelectorAll('.card__trash').forEach(trash => {
     trash.addEventListener('click', evt => {
         evt.target.closest('.card').remove();
+    });
+});
+
+// register event for pictures 
+document.querySelectorAll('.card__image').forEach(picture => {
+    picture.addEventListener('click', evt => {
+        if (image.classList.contains("image__opened")) {
+            return;
+        } else {
+            image.classList.add("image__opened");
+            const source = evt.target.src;
+            image.style.backgroundImage = `url(${source})`;
+        }
     });
 });

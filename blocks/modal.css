@@ -17,14 +17,6 @@
             justify-content: center;
 }
 
-/* .modal__add-location {
-    display: none;
-}
-
-.modal__edit [
-
-} */
-
 .modal__container{
     background-color: rgba(255, 255, 255);
     border-radius: 10px;
