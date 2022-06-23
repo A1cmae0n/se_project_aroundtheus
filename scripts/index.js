@@ -30,22 +30,23 @@ const modalCloseNewLocation = document.querySelector(".modal__close-new-location
 // selector(s) for cards
 const cardHeart = document.querySelector(".card__heart-icon");
 
-// selector(s) for images
-const image = document.querySelector(".image");
-const imageHidden = document.querySelector(".image__img");
-
 // selectors for profile elements
 let userName = document.querySelector(".profile__name");
 let userDescription = document.querySelector(".profile__title");
 
 // functions for the above listeners
 function openModal(evt) {
+    evt.preventDefault();
     if (evt.srcElement == document.querySelector(".profile__edit")) {
         editModal.classList.add("modal_opened");
+        // editModal.style.visibility = "visible";
+        // editModal.style.opacity = 1;
         document.querySelector(".form__input-edit:first-of-type").value = userName.textContent;
         document.querySelector(".form__input-edit:nth-of-type(2)").value = userDescription.textContent;
     } else if (evt.srcElement == document.querySelector(".profile__add-location")) {
         addLocationModal.classList.add("modal_opened");
+        // addLocationModal.style.visibility = "visible";
+        // addLocationModal.style.opacity = 1;
         document.querySelector(".form__input-new-location:first-of-type").value = "Title";
         document.querySelector(".form__input-new-location:nth-of-type(2)").value = "Image URL";
     }
@@ -89,7 +90,6 @@ function removeLocation(evt){
     console.log(evt);
 }
 
-
 // For future functionality 
 // iterate through data struct to populate card drawn from template
 function getCardElement(data) {
@@ -113,7 +113,6 @@ modalCloseNewLocation.addEventListener("click", closeModal);
 
 editForm.addEventListener("submit", saveProfileEdit);
 addLocationForm.addEventListener("submit", saveNewLocation);
-
 
 
 // songElement.querySelector(".song__like").addEventListener("click",  function (evt) {
@@ -141,6 +140,20 @@ document.querySelectorAll('.card__trash').forEach(trash => {
     });
 });
 
+
+
+
+
+
+
+
+
+// selector(s) for images
+const image = document.querySelector(".image");
+const imagePopUp = document.querySelector(".image__popup");
+const imageText = document.querySelector(".image__text");
+const imageClose = document.querySelector(".image__close");
+
 // register event for pictures 
 document.querySelectorAll('.card__image').forEach(picture => {
     picture.addEventListener('click', evt => {
@@ -149,7 +162,15 @@ document.querySelectorAll('.card__image').forEach(picture => {
         } else {
             image.classList.add("image__opened");
             const source = evt.target.src;
-            image.style.backgroundImage = `url(${source})`;
+            imagePopUp.src = source;
+            imageText.textContent = evt.target.alt;
         }
     });
 });
+
+imageClose.addEventListener("click", closeImage);
+
+function closeImage(evt) {
+    evt.preventDefault();
+    image.classList.remove("image__opened");
+}
