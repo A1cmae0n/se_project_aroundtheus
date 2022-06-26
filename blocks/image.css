@@ -43,7 +43,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
     height: 28px;
     width: 28px;
     background-image: url("../images/close_icon.svg");
