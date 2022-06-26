@@ -1,7 +1,11 @@
 .modal {
-    /* display: none; */
     visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
     opacity: 0;
+    -webkit-transition: visibility 0.5s, opacity 0.5s linear;
+    -o-transition: visibility 0.5s, opacity 0.5s linear;
     transition: visibility 0.5s, opacity 0.5s linear;
     position: absolute;
     margin: 0;
@@ -18,6 +22,12 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+}
+
+
+.modal__opened {
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal__container{
@@ -43,7 +53,7 @@
     margin-top: 28.79px;
 }
 
-.modal__close {
+.modal__close {    
     padding: unset;
     border: none;
     outline: inherit;
@@ -65,14 +75,6 @@
 .modal__close:hover {
     cursor: pointer;
     opacity: 60%;
-}
-
-.modal_opened {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 1;
-    visibility: visible;
 }
 
 @media screen and (max-width: 879px) {

@@ -38,69 +38,74 @@
                 <p class="footer__author">2022 Around The U.S.</p>
             </footer>
         </div>
-        <section class="modal modal__edit">
-            <div class="modal__container">
-                <h3 class="modal__header">Edit profile</h3>
-                <form class="form modal__form-edit" action="#" name="form" id="editProfile">
-                    <fieldset class="form__fieldset">
-                        <input
-                            type="text"
-                            class="form__input-edit"
-                            id="name"
-                            name="name"
-                            placeholder=""
-                        />
-                        <input
-                            type="text"
-                            class="form__input-edit"
-                            id="description"
-                            name="description"
-                            placeholder=""
-                        />
-                    </fieldset>
-                    <fieldset class="form__fieldset">
-                        <button type="submit" class="form__button">Save</button>
-                    </fieldset>
-                </form>
-                <button class="modal__close modal__close-edit" type="submit"></button>
-            </div>
-        </section>
 
-        <section class="modal modal__add-location">
-            <div class="modal__container">
-                <h3 class="modal__header">New Place</h3>
-                <form class="form modal__form-new-location" action="#" name="form" id="newLocation">
-                    <fieldset class="form__fieldset">
-                        <input
-                            type="text"
-                            class="form__input-new-location"
-                            id="title"
-                            name="title"
-                            placeholder=""
-                        />
-                        <input
-                            type="text"
-                            class="form__input-new-location"
-                            id="image-url"
-                            name="image-url"
-                            placeholder=""
-                        />
-                    </fieldset>
-                    <fieldset class="form__fieldset">
-                        <button type="submit" class="form__button">Save</button>
-                    </fieldset>
-                </form>
-                <button class="modal__close modal__close-new-location" type="submit"></button>
-            </div>
-        </section>
-        
         <section class="image">
             <div class="image__container">
                 <img class="image__popup" src="" alt="">
                 <button type="button" class="image__close"></button>
-                <p class="image__text">THE TEXT</p>
+                <p class="image__text"></p>
             </div>
         </section>
+
+        <template id="modal__edit-template">
+            <section class="modal modal__edit">
+                <div class="modal__container">
+                    <h3 class="modal__header">Edit profile</h3>
+                    <form class="form modal__form-edit" action="#" name="form" id="editProfile">
+                        <fieldset class="form__fieldset">
+                            <input
+                                type="text"
+                                class="form__input-edit"
+                                id="name"
+                                name="name"
+                                placeholder=""
+                            />
+                            <input
+                                type="text"
+                                class="form__input-edit"
+                                id="description"
+                                name="description"
+                                placeholder=""
+                            />
+                        </fieldset>
+                        <fieldset class="form__fieldset">
+                            <button type="submit" class="form__button">Save</button>
+                        </fieldset>
+                    </form>
+                    <button class="modal__close modal__close-edit" type="submit"></button>
+                </div>
+            </section>
+        </template>
+
+        <template id="modal__add-location-template">
+            <section class="modal modal__add-location">
+                <div class="modal__container">
+                    <h3 class="modal__header">New Place</h3>
+                    <form class="form modal__form-new-location" action="#" name="form" id="newLocation">
+                        <fieldset class="form__fieldset">
+                            <input
+                                type="text"
+                                class="form__input-new-location"
+                                id="title"
+                                name="title"
+                                placeholder=""
+                            />
+                            <input
+                                type="text"
+                                class="form__input-new-location"
+                                id="image-url"
+                                name="image-url"
+                                placeholder=""
+                            />
+                        </fieldset>
+                        <fieldset class="form__fieldset">
+                            <button type="submit" class="form__button">Save</button>
+                        </fieldset>
+                    </form>
+                    <button class="modal__close modal__close-new-location" type="submit"></button>
+                </div>
+            </section>
+        </template>
 
         <template id="card-template">
             <li class="card">
@@ -113,7 +118,7 @@
             </li>
             
         </template>
-
+        
         <script defer src="./scripts/index.js"></script>
     </body>
 </html>
