@@ -2,7 +2,7 @@
 const editProfileForm = document.querySelector(".modal__form-edit");
 const addLocationForm = document.querySelector(".modal__form-new-location");
 
-const editProfilePopUp = document.querySelector(".modal__edit");
+const editProfilePopUp = document.querySelector(".modal_edit");
 const addLocationPopUp = document.querySelector(".modal__add-location");
 
 const editProfileButton = document.querySelector(".profile__edit");
