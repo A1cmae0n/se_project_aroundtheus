@@ -18,6 +18,10 @@
     border: none;
 }
 
+.card__image:hover {
+    cursor: pointer;
+}
+
 .card__heart-icon {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;

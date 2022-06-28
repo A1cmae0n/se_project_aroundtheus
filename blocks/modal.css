@@ -4,9 +4,10 @@
     display: -ms-flexbox;
     display: flex;
     opacity: 0;
-    -webkit-transition: visibility 0.5s, opacity 0.5s linear;
-    -o-transition: visibility 0.5s, opacity 0.5s linear;
-    transition: visibility 0.5s, opacity 0.5s linear;
+    -webkit-transition: visibility 0s 0.5s, opacity 0.5s linear; 
+    -o-transition: visibility 0s 0.5s, opacity 0.5s linear; 
+    transition: visibility 0s 0.5s, opacity 0.5s linear; 
+
     position: absolute;
     margin: 0;
     padding: 0;
@@ -28,6 +29,7 @@
 .modal__opened {
     opacity: 1;
     visibility: visible;
+    transition: visibility 0s, opacity 0.5s linear; 
 }
 
 .modal__container{
