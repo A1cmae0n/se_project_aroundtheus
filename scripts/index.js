@@ -1,21 +1,27 @@
 /** Variables used across functions */
-const editProfileForm = document.querySelector(".modal__form-edit");
-const addLocationForm = document.querySelector(".modal__form-new-location");
-
 const editProfilePopUp = document.querySelector(".modal_edit");
 const addLocationPopUp = document.querySelector(".modal_add-location");
+const imageModal = document.querySelector(".modal_image");
 
 const editProfileButton = document.querySelector(".profile__edit");
 const addLocationButton = document.querySelector(".profile__add-location");
 
+const editProfileForm = document.querySelector(".modal__form-edit");
+const addLocationForm = document.querySelector(".modal__form-new-location");
+
+// const saveProfileEditButton =  document.querySelector(".modal__edit-profile-submit-button");
+const saveProfileEditForm = document.querySelector(".modal__form-edit");
+const saveAddLocationButton = document.querySelector(".modal__save-new-location-button");
+
 const closeEditProfileButton = document.querySelector(".modal__close-edit");
 const closeNewLocationButton = document.querySelector(".modal__close-new-location");
-
-const saveProfileEditButton =  document.querySelector(".modal__edit-profile-submit-button");
-const saveAddLocationButton = document.querySelector(".modal__save-new-location-button");
+const closeImageModalButton = document.querySelector(".modal_image__close");
 
 const userName = document.querySelector(".profile__name");
 const userDescription = document.querySelector(".profile__title");
+
+const imagePopUp = imageModal.querySelector(".modal_image__img");
+const imageText = imageModal.querySelector(".modal_image__text");
 
 const initialCards = [
     {name: "Yosemite Valley", link: "https://code.s3.yandex.net/web-code/yosemite.jpg"}, 
@@ -25,6 +31,32 @@ const initialCards = [
     {name: "Vanoise National Park", link: "https://code.s3.yandex.net/web-code/vanoise.jpg"}, 
     {name: "Lago di Braies", link: "https://code.s3.yandex.net/web-code/lago.jpg"}
 ];
+
+
+/** Open PopUps */
+const openModal = modal => {
+    modal.classList.add("modal__opened");
+}
+
+const openProfileModal = () => {
+    const userName = document.querySelector(".profile__name").textContent; 
+    const userDescription = document.querySelector(".profile__title").textContent; 
+    const nameInputField = document.querySelector('.form__input-edit[name="name"]');
+    const descriptionInputField = document.querySelector('.form__input-edit[name="description"]');
+    nameInputField.value = userName;
+    descriptionInputField.value = userDescription;
+    openModal(editProfilePopUp);
+}
+
+const openLocationModal = () => {
+    openModal(addLocationPopUp);
+}
+
+const openImageModal = (evt, data) => {
+    imagePopUp.src = evt.target.src;
+    imageText.textContent = data.name;
+    openModal(imageModal);
+};  
 
 /** Populate Page with Cards */
 const cardsList = document.querySelector(".cards__list");
@@ -51,38 +83,19 @@ function getCardElement(data) {
     const imageElement = card.querySelector("img");
     imageElement.setAttribute("src", data.link);
     imageElement.setAttribute("alt", `Photo of {data.name}`);
-
-    const imagePopUpContainer = document.querySelector(".image");
-    const imagePopUp = document.querySelector(".image__popup");
-    const imageText = document.querySelector(".image__text");
-
-    imageElement.addEventListener("click", evt => {
-        imagePopUpContainer.classList.add("image__opened");
-        imagePopUp.src = evt.target.src;
-        imageText.textContent = data.name;
-    });
-
-    const imageClose = document.querySelector(".image__close");
-    imageClose.addEventListener("click", closeImage);
-    function closeImage(evt) {
-        evt.preventDefault();
-        imagePopUpContainer.classList.remove("image__opened");
-    }
+    imageElement.addEventListener("click", evt => openImageModal(evt, data));    
     return card;
 }
+
 /** End */
+// const cardImage = card.querySelector("img");
+// imagePopUp.addEventListener("click", openImagePopUp);
 
-/** Open PopUps */
-const openModal = modal => {
-    modal.classList.add("modal__opened");
-}
 
-const openProfileModal = () => {
-    openModal(editProfilePopUp);
-}
-const openLocationModal = () => {
-    openModal(addLocationPopUp);
-}
+// const imagePopUpContainer = document.querySelector(".image");
+// const imagePopUp = document.querySelector(".image__popup");
+// const imageText = document.querySelector(".image__text");
+ 
 
 editProfileButton.addEventListener("click", openProfileModal);
 addLocationButton.addEventListener("click", openLocationModal);
@@ -95,6 +108,8 @@ const closeModal = modal => {
 
 closeEditProfileButton.addEventListener("click", closeProfileModal);
 closeNewLocationButton.addEventListener("click", closeNewLocationModal);
+closeImageModalButton.addEventListener("click", closeImageModal);
+
 
 function closeProfileModal() {
     closeModal(editProfilePopUp);
@@ -102,11 +117,15 @@ function closeProfileModal() {
 function closeNewLocationModal() {
     closeModal(addLocationPopUp);
 }
+
+function closeImageModal() {
+    closeModal(imageModal);
+}
 /** END */
+
 
 const saveProfileEdit = evt => {
     evt.preventDefault();
-
     const userNameInput = document.getElementById("name").value;
     const userDescriptionInput = document.getElementById("description").value;
 
@@ -129,5 +148,5 @@ const saveNewLocation = evt => {
 }
 /** END Add Location and Save Profile Edits*/
 
-saveProfileEditButton.addEventListener("click", saveProfileEdit);
-saveAddLocationButton.addEventListener("click", saveNewLocation);
+saveProfileEditForm.addEventListener("submit", saveProfileEdit);
+saveAddLocationButton.addEventListener("submit", saveNewLocation);
