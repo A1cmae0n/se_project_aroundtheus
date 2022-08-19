@@ -1,7 +1,7 @@
 /** Variables used across functions */
 const editProfilePopUp = document.querySelector(".modal_edit");
 const addLocationPopUp = document.querySelector(".modal_add-location");
-const imageModal = document.querySelector(".modal_image");
+const imageModal = document.querySelector(".modal_image"); 
 
 const editProfileButton = document.querySelector(".profile__edit");
 const addLocationButton = document.querySelector(".profile__add-location");
@@ -15,13 +15,13 @@ const saveAddLocationButton = document.querySelector(".modal__save-new-location-
 
 const closeEditProfileButton = document.querySelector(".modal__close-edit");
 const closeNewLocationButton = document.querySelector(".modal__close-new-location");
-const closeImageModalButton = document.querySelector(".modal_image__close");
+const closeImageModalButton = document.querySelector(".modal__image-close");
 
 const userName = document.querySelector(".profile__name");
 const userDescription = document.querySelector(".profile__title");
 
-const imagePopUp = imageModal.querySelector(".modal_image__img");
-const imageText = imageModal.querySelector(".modal_image__text");
+const imagePopUp = imageModal.querySelector(".modal__img");
+const imageText = imageModal.querySelector(".modal__image-text");
 
 const initialCards = [
     {name: "Yosemite Valley", link: "https://code.s3.yandex.net/web-code/yosemite.jpg"}, 
@@ -31,7 +31,6 @@ const initialCards = [
     {name: "Vanoise National Park", link: "https://code.s3.yandex.net/web-code/vanoise.jpg"}, 
     {name: "Lago di Braies", link: "https://code.s3.yandex.net/web-code/lago.jpg"}
 ];
-
 
 /** Open PopUps */
 const openModal = modal => {
@@ -56,7 +55,7 @@ const openImageModal = (evt, data) => {
     imagePopUp.src = evt.target.src;
     imageText.textContent = data.name;
     openModal(imageModal);
-};  
+};
 
 /** Populate Page with Cards */
 const cardsList = document.querySelector(".cards__list");
@@ -67,7 +66,7 @@ initialCards.forEach(cardObj => {
 });
 
 function getCardElement(data) {
-    const cardTemplate  = document.querySelector("#card-template").content;
+    const cardTemplate = document.querySelector("#card-template").content;
     const card = cardTemplate.querySelector(".card").cloneNode(true); 
 
     const cardHeader = card.querySelector(".card__header");
@@ -83,18 +82,38 @@ function getCardElement(data) {
     const imageElement = card.querySelector("img");
     imageElement.setAttribute("src", data.link);
     imageElement.setAttribute("alt", `Photo of {data.name}`);
+
+    //     imageElement.addEventListener("click", evt => { 
+//         imagePopUpContainer.classList.add("image__opened"); 
+//         imagePopUp.src = evt.target.src; 
+//         imageText.textContent = data.name; 
+//     }); 
+
+
+// const openImageModal = (evt, data) => {
+//     imagePopUp.src = evt.target.src;
+//     imageText.textContent = data.name;
+//     openModal(imageModal);
+// };  
     imageElement.addEventListener("click", evt => openImageModal(evt, data));    
     return card;
 }
 
-/** End */
-// const cardImage = card.querySelector("img");
-// imagePopUp.addEventListener("click", openImagePopUp);
+// function getCardElement(data) { 
+//     const imageElement = card.querySelector("img"); 
+//     imageElement.setAttribute("src", data.link); 
+//     imageElement.setAttribute("alt", `Photo of {data.name}`); 
 
+//     const imagePopUpContainer = document.querySelector(".image"); 
+//     const imagePopUp = document.querySelector(".image__popup"); 
+//     const imageText = document.querySelector(".image__text"); 
 
-// const imagePopUpContainer = document.querySelector(".image");
-// const imagePopUp = document.querySelector(".image__popup");
-// const imageText = document.querySelector(".image__text");
+//     imageElement.addEventListener("click", evt => { 
+//         imagePopUpContainer.classList.add("image__opened"); 
+//         imagePopUp.src = evt.target.src; 
+//         imageText.textContent = data.name; 
+//     }); 
+// }
  
 
 editProfileButton.addEventListener("click", openProfileModal);
