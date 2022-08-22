@@ -9,9 +9,9 @@ const addLocationButton = document.querySelector(".profile__add-location");
 const editProfileForm = document.querySelector(".modal__form-edit");
 const addLocationForm = document.querySelector(".modal__form-new-location");
 
-// const saveProfileEditButton =  document.querySelector(".modal__edit-profile-submit-button");
 const saveProfileEditForm = document.querySelector(".modal__form-edit");
-const saveAddLocationButton = document.querySelector(".modal__save-new-location-button");
+// const saveAddLocationButton = document.querySelector(".modal__save-new-location-button");
+const saveLocationForm = document.querySelector(".modal__form-edit");
 
 const closeEditProfileButton = document.querySelector(".modal__close-edit");
 const closeNewLocationButton = document.querySelector(".modal__close-new-location");
@@ -140,8 +140,6 @@ function closeNewLocationModal() {
 function closeImageModal() {
     closeModal(imageModal);
 }
-/** END */
-
 
 const saveProfileEdit = evt => {
     evt.preventDefault();
@@ -168,4 +166,4 @@ const saveNewLocation = evt => {
 /** END Add Location and Save Profile Edits*/
 
 saveProfileEditForm.addEventListener("submit", saveProfileEdit);
-saveAddLocationButton.addEventListener("submit", saveNewLocation);
+saveLocationForm.addEventListener("submit", saveNewLocation);
