@@ -11,7 +11,7 @@ const addLocationForm = document.querySelector(".modal__form-new-location");
 
 const saveProfileEditForm = document.querySelector(".modal__form-edit");
 // const saveAddLocationButton = document.querySelector(".modal__save-new-location-button");
-const saveLocationForm = document.querySelector(".modal__form-edit");
+const saveLocationForm = document.querySelector(".modal_add-location");
 
 const closeEditProfileButton = document.querySelector(".modal__close-edit");
 const closeNewLocationButton = document.querySelector(".modal__close-new-location");
