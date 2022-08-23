@@ -119,7 +119,7 @@
     opacity: 1;
     -webkit-transition: visibility 0s 0.5s, opacity 0.5s linear;
     -o-transition: visibility 0s 0.5s, opacity 0.5s linear;
-    transition: visibility 0s 0.5s, opacity 0.5s linear; 
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
 
     position: fixed;
     margin: 0;
@@ -161,9 +161,9 @@
     position: relative;
     bottom: 542px;
     left: 400px; */
-    padding: unset; 
-    border: none; 
-    outline: inherit; 
+    padding: unset;
+    border: none;
+    outline: inherit;
     display: -webkit-box; 
     display: -ms-flexbox; 
     display: flex; 
