@@ -67,22 +67,22 @@
 }
 
 .modal__close {    
-    padding: unset; 
-    border: none; 
-    outline: inherit; 
-    display: -webkit-box; 
-    display: -ms-flexbox; 
-    display: flex; 
-    position: relative; 
-    height: 40px; 
-    width: 40px; 
-    background-image: url("../images/close_icon.svg"); 
-    background-color: rgba(0, 0, 0, 0); 
-    background-repeat: no-repeat; 
-    background-size: contain; 
-    top:  -334px; 
-    left: 433px; 
-    margin-top: -40px; 
+    padding: unset;
+    border: none;
+    outline: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/close_icon.svg");
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top:  -334px;
+    left: 433px;
+    margin-top: -40px;
 }
 
 .modal__close:hover {
