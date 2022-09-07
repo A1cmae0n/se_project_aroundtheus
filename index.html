@@ -54,23 +54,25 @@
                     <fieldset class="form__fieldset">
                         <input
                             type="text"
-                            class="form__input-edit"
+                            class="form__input form__input-edit"
                             id="name"
                             name="name"
                             placeholder=""
                             required
                         />
+                        <span class="form__input-error name-input-error"></span>
                         <input
                             type="text"
-                            class="form__input-edit"
+                            class="form__input form__input-edit"
                             id="description"
                             name="description"
                             placeholder=""
                             required
                         />
+                        <span class="form__input-error description-input-error"></span>
                     </fieldset>
                     <fieldset class="form__fieldset">
-                        <button type="submit" class="modal__edit-profile-submit-button form__button">Save</button>
+                        <button type="submit" class="form__button modal__edit-profile-submit-button">Save</button>
                     </fieldset>
                 </form>
                 <button class="modal__close modal__close-edit" type="click"></button>
@@ -84,23 +86,25 @@
                     <fieldset class="form__fieldset">
                         <input
                             type="text"
-                            class="form__input-new-location"
+                            class="form__input form__input-new-location"
                             id="title"
                             name="title"
                             placeholder="Title"
                             required
                         />
+                        <span class="form__input-error title-input-error"></span>
                         <input
                             type="text"
-                            class="form__input-new-location"
+                            class="form__input form__input-new-location"
                             id="image-url"
                             name="image-url"
                             placeholder="Image link"
                             required
                         />
+                        <span class="form__input-error image-url-input-error"></span>
                     </fieldset>
                     <fieldset class="form__fieldset">
-                        <button type="submit" class="modal__save-new-location-button form__button">Save</button>
+                        <button type="submit" class="form__button modal__save-new-location-button">Save</button>
                     </fieldset>
                 </form>
                 <button class="modal__close modal__close-new-location" type="click"></button>

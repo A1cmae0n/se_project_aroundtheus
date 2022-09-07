@@ -83,3 +83,31 @@
 
     }
 }
+
+.form__input_type_error {
+    background-color: black;
+}
+  
+.form__input-error_active {
+    background-color: green;
+}
+
+/* .title-error {
+
+}
+
+.image-url-error {
+
+}
+
+.name-error {
+
+}
+
+.description-error {
+
+} */
+
+.button_inactive {
+    background-color: green;
+}
